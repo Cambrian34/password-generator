@@ -1,6 +1,10 @@
 // 
+
+var maxLength = 64; // Maximum allowed length
+
+
 function generatePassword() {
-    var length = document.getElementById('length').value;
+    length = Math.min(document.getElementById('length').value, maxLength);
     var useLowercase = document.getElementById('lowercase').checked;
     var useUppercase = document.getElementById('uppercase').checked;
     var useNumbers = document.getElementById('numbers').checked;
